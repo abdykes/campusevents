@@ -1,0 +1,51 @@
+<% content_for(:sidebar) do %>
+    <strong>Meetings</strong>
+    <table>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+      </tr>
+      </thead>
+      <% @location.meetings.where(["start_time > ?", DateTime.now]).sort_by{|t| t.start_time.to_i}.first(5).each do |l| %>
+          <tr>
+            <td><%= l.name %></td>
+            <td><%= l.location.name %></td>
+            <td><%= l.start_time %></td>
+            <td><%= l.end_time %></td>
+          </tr>
+      <% end %>
+    </table>
+<% end %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @location.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @location.description %>
+</p>
+
+<p>
+  <strong>Lattitude:</strong>
+  <%= @location.lattitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @location.longitude %>
+</p>
+
+<p>
+  <strong>Map url:</strong>
+  <%= @location.map_url %>
+</p>
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @events_sponser.event_id %>
+</p>
+
+<p>
+  <strong>Sponser:</strong>
+  <%= @events_sponser.sponser_id %>
+</p>
+
+<%= link_to 'Edit', edit_events_sponser_path(@events_sponser) %> |
+<%= link_to 'Back', events_sponsers_path %>

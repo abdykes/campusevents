@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3811068690">
+    <data-source source="LOCAL" name="Rails campusevents: development" uuid="ab242ff8-9e03-4670-84d9-0be9bbb3b093">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\dykes_000\Dropbox\IUPUI\CIT 436 SP 14\Assignment1\campusevents\db\development.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails campusevents: test" uuid="4f13400d-5a4e-46fe-878d-a024945864ff">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\dykes_000\Dropbox\IUPUI\CIT 436 SP 14\Assignment1\campusevents\db\test.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

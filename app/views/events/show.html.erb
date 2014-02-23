@@ -1,0 +1,53 @@
+<% content_for(:sidebar) do %>
+    <strong>Meetings</strong>
+    <table>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+      </tr>
+      </thead>
+    <% @event.meetings.each do |m| %>
+        <tr>
+          <td><%= m.name %></td>
+          <td><%= m.location.name %></td>
+          <td><%= m.start_time %></td>
+          <td><%= m.end_time %></td>
+        </tr>
+    <% end %>
+    </table>
+<% end %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @event.name %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @event.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @event.end_date %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @event.url %>
+</p>
+
+<p>
+  <strong>Sponsers:</strong>
+  <% @event.sponsers.each do |s| %>
+      <%= s.name %>,
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>
