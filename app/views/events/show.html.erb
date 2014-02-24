@@ -1,23 +1,6 @@
 <% content_for(:sidebar) do %>
-    <strong>Meetings</strong>
-    <table>
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Location</th>
-        <th>Start Time</th>
-        <th>End Time</th>
-      </tr>
-      </thead>
-    <% @event.meetings.each do |m| %>
-        <tr>
-          <td><%= m.name %></td>
-          <td><%= m.location.name %></td>
-          <td><%= m.start_time %></td>
-          <td><%= m.end_time %></td>
-        </tr>
-    <% end %>
-    </table>
+    <strong>Sponsors</strong>
+    <%= render(partial: "event_sponsers", object: @event) %>
 <% end %>
 
 <p id="notice"><%= notice %></p>

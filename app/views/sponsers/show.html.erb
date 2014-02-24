@@ -1,3 +1,8 @@
+<% content_for(:sidebar) do %>
+    <strong>Events</strong>
+    <%= render(partial: "sponser_events", object: @sponser) %>
+<% end %>
+
 <p id="notice"><%= notice %></p>
 
 <p>

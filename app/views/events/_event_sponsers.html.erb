@@ -1,0 +1,12 @@
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+  </tr>
+  </thead>
+  <% event_sponsers.sponsers.each do |m| %>
+      <tr>
+        <td><a href="/sponsers/<%= m.attributes['id'] %>"><%= m.name %></a></td>
+      </tr>
+  <% end %>
+</table>

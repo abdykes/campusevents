@@ -1,0 +1,14 @@
+<table>
+  <thead>
+  <tr>
+    <th>Event</th>
+    <th>Date</th>
+  </tr>
+  </thead>
+  <% sponser_events.events.each do |e| %>
+      <tr>
+        <td><a href="/events/<%= e.attributes['id'] %>"><%= e.name %></a></td>
+        <td><%= e.start_date %></td>
+      </tr>
+  <% end %>
+</table>
